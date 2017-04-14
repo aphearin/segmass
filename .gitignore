@@ -51,3 +51,12 @@ distribute-*.tar.gz
 
 # Mac OSX
 .DS_Store
+
+# Auxiliary latex files
+paper/segmass.aux
+paper/segmass.bbl
+paper/segmass.blg
+paper/segmass.dvi
+paper/segmass.log
+paper/segmass.ps
+
