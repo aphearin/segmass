@@ -19,6 +19,15 @@
 \newcommand{\bit}{\begin{itemize}}
 \newcommand{\eit}{\end{itemize}}
 
+%-------- journals
+\newcommand{\araa}{ARAA~}
+\newcommand{\apj}{ApJ~}
+\newcommand{\apjl}{ApJL~}
+\newcommand{\apjs}{ApJS~}
+\newcommand{\mnras}{MNRAS~}
+\newcommand{\nat}{Nature~}
+\newcommand{\physrep}{Phys. Rep.~}
+\newcommand{\aj}{AJ~}
 
 
 
@@ -26,24 +35,24 @@
 
 \begin{document}
 
-\title[Abridged Title]
-{Test Title}
+\title[Forward-modeling satellite mass segregation]
+{On Satellite Mass Segregation: Forward-modeling techniques and significance for cosmology}
 
 \author[A.P. Hearin]{Andrew P. Hearin}
 
 \maketitle
 
 \begin{abstract}
-Some abstract goes here.
+Dark matter subhalos are segregated by mass within their host halo. Mass segregation of subhalos is well-understood theoretically, but predictions for the strength of satellite galaxy mass segregation typically come from hydrodynamical simulations and complex semi-analytic models, in which mass segregation emerges as the combined effect of numerous parameters regulating distinct physical processes. Here we introduce a simple extension to conventional empirical modeling techniques to directly model the true level of satellite galaxy mass segregation. Our model spans the maximum allowable range of the effect while minimally expanding the parameter space. On scales of a few hundred kpc, mass segregation impacts galaxy clustering at the 5-10\% level, galaxy lensing at the 2-5\% level, and redshift-space distortions at the 40\% level. The potential impact of mass segregation on clustering and lensing becomes sub-percent on scales r >~ 600 kpc; for RSD statistics, the potential impact does not drop below percent-level until $r\gtrsim 3-5$ Mpc. We provide a python implementation of the model as part of the {\tt Halotools} empirical modeling library. 
 \end{abstract}
 
 \section{Introduction}
 Some introduction goes here.
 
-\section{Another section}
-Another section goes here. 
+\section{Simulation}
+We use  \citet{rockstar} subhalos. 
 
-\bibliographystyle{abbrv}
+\bibliographystyle{mn2e} 
 \bibliography{segmass}
 
 
