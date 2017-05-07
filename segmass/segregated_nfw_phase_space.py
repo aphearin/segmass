@@ -4,7 +4,7 @@ from __future__ import division, print_function, absolute_import
 
 import numpy as np
 
-from .biased_nfw_phase_space import BiasedNFWPhaseSpace
+from halotools.empirical_models import BiasedNFWPhaseSpace
 
 
 __author__ = ('Andrew Hearin', )
@@ -23,14 +23,9 @@ class SegregatedNFWPhaseSpace(BiasedNFWPhaseSpace):
     def __init__(self, **kwargs):
         BiasedNFWPhaseSpace.__init__(self, **kwargs)
 
-        self._initialize_conc_bias_param_dict()
-
-    def _initialize_conc_bias_param_dict(self, **kwargs):
-        r""" Set up the appropriate number of keys in the parameter dictionary
-        and give the keys standardized names.
-        """
         self.param_dict['conc_bias_1'] = 1
         self.param_dict['conc_bias_2'] = 1
+        del self.param_dict['conc_gal_bias']
 
         self._conc_bias_abscissa_1 = 9
         self._conc_bias_abscissa_2 = 11.5
