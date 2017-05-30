@@ -1,7 +1,7 @@
 """
 """
 import numpy as np
-from halotools.empirical_models.phase_space_models.analytic_models.satellites.nfw.kernels import mc_generate_nfw_radial_positions
+from halotools.empirical_models.phase_space_models.analytic_models.satellites.nfw.kernels.mc_generate_nfw_radial_positions import mc_generate_nfw_radial_positions
 
 
 def digitize_concentration(conc, conc_bin_edges):
@@ -18,6 +18,16 @@ def digitize_concentration(conc, conc_bin_edges):
 
 def assign_r_by_rvir(galaxy_concentration, conc_bin_edges):
     """
+
+    Examples
+    --------
+    >>> num_gals = int(1e3)
+    >>> cmin, cmax = 1.5, 30.
+    >>> galaxy_concentration = np.random.uniform(cmin, cmax, num_gals)
+    >>> conc_bin_edges = np.linspace(2, 25, 25)
+    >>> r_by_rvir = assign_r_by_rvir(galaxy_concentration, conc_bin_edges)
+    >>> assert np.all(r_by_rvir >= 0)
+    >>> assert np.all(r_by_rvir <= 1)
     """
     iconc, conc_bin_midpoints = digitize_concentration(galaxy_concentration, conc_bin_edges)
 
